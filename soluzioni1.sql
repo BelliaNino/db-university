@@ -28,4 +28,5 @@ WHERE YEAR(current_date()) - YEAR(`date_of_birth`) > 30;
 
 SELECT *
 FROM `courses`
-WHERE (`courses`.`period`) = 'I semestre';
+WHERE (`courses`.`period`) = 'I semestre' AND
+(`courses`.`year`) = '1';
