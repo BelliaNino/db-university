@@ -54,3 +54,11 @@ WHERE `degrees`.`level` = 'magistrale';
 
 SELECT `departments`.`name`
 FROM `departments`;
+
+/*
+8.  Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
+*/
+
+SELECT *
+FROM `teachers`
+WHERE `teachers`.`phone` IS NULL;
