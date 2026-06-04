@@ -47,3 +47,10 @@ WHERE HOUR(`exams`.`hour`) >= 14 AND
 SELECT *
 FROM `degrees`
 WHERE `degrees`.`level` = 'magistrale';
+
+/*
+7. Da quanti dipartimenti è composta l'università? (12)
+*/
+
+SELECT `departments`.`name`
+FROM `departments`;
