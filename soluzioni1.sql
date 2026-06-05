@@ -108,3 +108,14 @@ from departments d
      join students s
           on e.id = s.degree_id
 order by s.surname, s.name;
+
+-- 5. Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti
+
+select *
+from degrees d
+     join courses c 
+          on d.id = c.degree_id
+     join course_teacher ct 
+          on c.id = ct.course_id
+     join teachers t 
+          on ct.teacher_id = t.id;
