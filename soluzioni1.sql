@@ -133,3 +133,22 @@ from departments dep
 	 join teachers t
           on ct.teacher_id = t.id
 where dep.id = 5;
+
+-- GROUP BY
+
+-- 1. Contare quanti iscritti ci sono stati ogni anno
+
+select year(enrolment_date) 
+       as anno, count(*) 
+       as iscritti
+from students
+group by year(enrolment_date);
+
+
+
+
+
+
+
+
+
