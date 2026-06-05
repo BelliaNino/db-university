@@ -88,3 +88,11 @@ from departments d
      on d.id = c.department_id
      where d.id = 7 and
      c.level = 'magistrale';
+
+-- 3. Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44)
+
+select *
+from teachers t
+join course_teacher ct ON t.id = ct.teacher_id
+join courses c ON ct.course_id = c.id
+where t.id = 44;
