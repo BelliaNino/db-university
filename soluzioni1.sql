@@ -151,6 +151,16 @@ select office_address, count(*)
 from teachers t
 group by office_address;
 
+-- 3. Calcolare la media dei voti di ogni appello d'esame
+select exam_id, avg(es.vote) as media_voti
+from exam_student es
+group by exam_id;
+
+select e.id as appello_d_esame, avg(es.vote) as media_voti
+from exams e
+join exam_student es
+on e.id = es.exam_id
+group by appello_d_esame;
 
 
 
