@@ -96,3 +96,15 @@ from teachers t
 join course_teacher ct ON t.id = ct.teacher_id
 join courses c ON ct.course_id = c.id
 where t.id = 44;
+
+/* 4. Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui
+sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e
+nome */
+
+select *
+from departments d
+     join degrees e 
+          on d.id = e.department_id
+     join students s
+          on e.id = s.degree_id
+order by s.surname, s.name;
