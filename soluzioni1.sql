@@ -75,3 +75,16 @@ from degrees d
      join students s
      on d.id = s.degree_id
 where d.id = 53;
+
+-- 2. Selezionare tutti i Corsi di Laurea Magistrale del Dipartimento di Neuroscienze
+select * 
+from departments d
+where d.name = 'Dipartimento di Neuroscienze';
+-- 7
+
+select * 
+from departments d
+     join degrees c
+     on d.id = c.department_id
+     where d.id = 7 and
+     c.level = 'magistrale';
