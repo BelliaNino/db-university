@@ -144,8 +144,12 @@ select year(enrolment_date)
 from students
 group by year(enrolment_date);
 
+-- 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
 
-
+select office_address, count(*) 
+    as numero_insegnanti
+from teachers t
+group by office_address;
 
 
 
