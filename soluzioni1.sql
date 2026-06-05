@@ -119,3 +119,17 @@ from degrees d
           on c.id = ct.course_id
      join teachers t 
           on ct.teacher_id = t.id;
+
+-- 6. Selezionare tutti i docenti che insegnano nel Dipartimento di Matematica (54)
+
+select distinct t.name, t.surname
+from departments dep
+     join degrees d
+          on dep.id = d.department_id
+	 join courses c 
+          on d.id = c.degree_id
+	 join course_teacher ct
+          on c.id = ct.course_id
+	 join teachers t
+          on ct.teacher_id = t.id
+where dep.id = 5;
