@@ -156,11 +156,27 @@ select exam_id, avg(es.vote) as media_voti
 from exam_student es
 group by exam_id;
 
+-- con JOIN
+
 select e.id as appello_d_esame, avg(es.vote) as media_voti
 from exams e
 join exam_student es
 on e.id = es.exam_id
 group by appello_d_esame;
+
+-- 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
+
+select department_id, count(*) as corsi_di_laurea
+from degrees d 
+group by department_id;
+
+-- con JOIN
+
+select dep.name as dipartimento, count(*) as corsi_di_laurea 
+from departments dep
+     join degrees d
+          on dep.id = d.department_id
+group by dipartimento;
 
 
 
