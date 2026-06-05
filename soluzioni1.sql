@@ -62,3 +62,16 @@ FROM `departments`;
 SELECT *
 FROM `teachers`
 WHERE `teachers`.`phone` IS NULL;
+
+--JOIN
+
+-- 1. Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
+select *
+from degrees d
+where d.name = 'Corso di Laurea in Economia';
+	-- 53
+select *
+from degrees d
+     join students s
+     on d.id = s.degree_id
+where d.id = 53;
